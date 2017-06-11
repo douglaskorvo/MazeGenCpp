@@ -1,7 +1,5 @@
 #include "Maze.hpp"
 
-#include <iostream>
-
 Maze::Maze(int num_rows, int num_cols)
     : p_cols(num_cols)
 {
@@ -19,10 +17,6 @@ auto Maze::draw(const ALLEGRO_COLOR& fill,
     for(auto& cell : p_grid) {
         cell.draw(fill, line);
     }
-}
-
-auto Maze::cell_at(const int i, const int j) -> Cell& {
-    return p_grid[i + j*p_cols];
 }
 
 auto Maze::remove_walls_between(const int cell1_r, const int cell1_c,
@@ -46,4 +40,8 @@ auto Maze::remove_walls_between(const int cell1_r, const int cell1_c,
         cell1.remove_wall(Pos::Bottom);
         cell2.remove_wall(Pos::Top);
     }
+}
+
+auto Maze::cell_at(const int i, const int j) -> Cell& {
+    return p_grid[i + j*p_cols];
 }

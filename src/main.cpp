@@ -1,7 +1,5 @@
 #include <iostream>
 
-#include <allegro5/allegro.h>
-
 #include "Game.hpp"
 
 auto main(int, char**) -> int {

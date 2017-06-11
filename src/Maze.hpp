@@ -4,8 +4,6 @@
 
 #include "Cell.hpp"
 
-using std::vector;
-
 class Maze {
 public:
     Maze(int num_rows, int num_cols);
@@ -18,7 +16,7 @@ public:
 
 private:
     int p_cols;
-    vector<Cell> p_grid;
+    std::vector<Cell> p_grid;
 
     auto cell_at(const int i, const int j) -> Cell&;
 };

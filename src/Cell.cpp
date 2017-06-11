@@ -2,8 +2,6 @@
 
 #include <allegro5/allegro_primitives.h>
 
-#include <iostream>
-
 Cell::Cell(int i, int j, float size)
     : Cell(i, j, size, size)
 {}
